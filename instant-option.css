@@ -1,0 +1,30 @@
+.instant-option {
+    left: 0;
+    top: 0;
+    display: none;
+    position: absolute;
+    background: #FFF;
+    box-shadow: 1px 1px 4px 0 #e6e6e6;
+    border-radius: 3px;
+    border: 1px solid #EEE;
+    padding: 10px 0;
+    width: 252px;
+    z-index: 100;
+}
+
+.inst-op-url {
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    border-bottom: 1px solid #eeeeee57;
+}
+
+.inst-op-url:last-child {
+    border-bottom: 0 solid #eeeeee57;
+}
+
+.inst-op-url:hover {
+    background-image: linear-gradient(to bottom, #8dbf6e, #a6da86);
+    cursor: pointer;
+    color: #FFF;
+}
