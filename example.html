@@ -89,7 +89,7 @@
         <td>Senior Developer</td>
         <td>2012-01-18</td>
         <td>
-            <i class="material-icons inst-op-sms" data-id="100001">more_vert</i>
+            <i class="material-icons inst-op-sms" data-id="100001" data-name="Kumar Bishojit Paul">more_vert</i>
         </td>
     </tr>
     <tr>
@@ -98,7 +98,7 @@
         <td>Team manager</td>
         <td>2015-03-14</td>
         <td>
-            <i class="material-icons inst-op-sms" data-id="100302">more_vert</i>
+            <i class="material-icons inst-op-sms" data-id="100302" data-name="Jack">more_vert</i>
         </td>
     </tr>
     <tr>
@@ -107,7 +107,7 @@
         <td>Network Engineer</td>
         <td>2012-03-14</td>
         <td>
-            <i class="material-icons inst-op-sms" data-id="100753">more_vert</i>
+            <i class="material-icons inst-op-sms" data-id="100753" data-name="Prokash">more_vert</i>
         </td>
     </tr>
     </tbody>
@@ -115,11 +115,9 @@
 
 <script>
     $op = $.CreateInstantOption();
-    $op.instOpAddUrl('test1', '#', 'Message Details', '', "alert('{id}'); return false;");
-    $op.instOpAddUrl('test2', '#', 'Bulk Details', '', "$(this).makePopUp('/messaging/{id}/', ''); return false;");
-    $op.instOpAddUrl('test4', '#', 'Resend SMS');
-    $op.instOpAddUrl('test4', '#', 'Add number to contact');
-    $op.instOpSetClickable('inst-op-sms', {'data-id': 'id'});
+    $op.instOpAddUrl('test1', '#', 'Show ID', '', "alert('{id}'); return false;");
+    $op.instOpAddUrl('test2', '#', 'Show Name', '', "alert('{name}'); return false;");
+    $op.instOpSetClickable('inst-op-sms', {'data-id': 'id', 'data-name': 'name'});
 </script>
 </body>
 </html>
