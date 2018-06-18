@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>jQuery Instant Option</title>
+    <link rel="stylesheet" type="text/css"
+          href="//fonts.googleapis.com/css?family=Montserrat|Material+Icons|Roboto+Condensed|Open+Sans:400,300,600,700&subset=all"/>
+    <link rel="stylesheet" type="text/css" href="instant-option.css"/>
 
+    <script src="https://www.smsbags.com/tools/jquery/jquery-3.2.1.min.js"></script>
+    <script src="instant-option.js"></script>
+</head>
+<body class="messaging">
+<input type="hidden" name="TIME" id="TIME" value="1529338388"/>
+
+<table class="table-tbl1">
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Designation</td>
+        <td>Joining Date</td>
+        <td>&nbsp;</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>100001</td>
+        <td>Kumar Bishojit Paul</td>
+        <td>Senior Developer</td>
+        <td>2012-01-18</td>
+        <td>
+            <i class="material-icons inst-op-sms" data-id="100001">more_vert</i>
+        </td>
+    </tr>
+    <tr>
+        <td>100302</td>
+        <td>Jack</td>
+        <td>Team manager</td>
+        <td>2015-03-14</td>
+        <td>
+            <i class="material-icons inst-op-sms" data-id="100302">more_vert</i>
+        </td>
+    </tr>
+    <tr>
+        <td>100753</td>
+        <td>Prokash</td>
+        <td>Network Engineer</td>
+        <td>2012-03-14</td>
+        <td>
+            <i class="material-icons inst-op-sms" data-id="100753">more_vert</i>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+    $op = $.CreateInstantOption();
+    $op.instOpAddUrl('test1', '#', 'Message Details', '', "alert('{id}'); return false;");
+    $op.instOpAddUrl('test2', '#', 'Bulk Details', '', "$(this).makePopUp('/messaging/{id}/', ''); return false;");
+    $op.instOpAddUrl('test4', '#', 'Resend SMS');
+    $op.instOpAddUrl('test4', '#', 'Add number to contact');
+    $op.instOpSetClickable('inst-op-sms', {'data-id': 'id'});
+</script>
+</body>
+</html>
